@@ -1,0 +1,1 @@
+"use strict";var db=require("../db"),shortid=require("shortid");module.exports={create:function(e,r){r.render("transfer/create",{csrfToken:e.csrfToken()})},postCreate:function(e,r){var t={id:shortid.generate(),amount:parseInt(e.body.amount),accountId:e.body.accountId,userId:e.signedCookies.userId};db.get("transfer").push(t).write(),r.render("transfer/create")}};

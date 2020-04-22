@@ -1,0 +1,1 @@
+"use strict";var express=require("express"),controller=require("../controllers/cart.controller"),router=express.Router();router.get("/add/:productId",controller.addToCart),module.exports=router;

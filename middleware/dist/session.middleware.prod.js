@@ -1,0 +1,1 @@
+"use strict";var shortid=require("shortid"),db=require("../db");module.exports=function(s,e,i){if(!s.signedCookies.sessionId){var o=shortid.generate();e.cookie("sessionId",o,{signed:!0}),db.get("sessions").push({id:o}).write()}i()};

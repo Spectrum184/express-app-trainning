@@ -1,0 +1,1 @@
+"use strict";var db=require("../db");module.exports.requireAuth=function(e,r,i){if(e.signedCookies.userId){var s=db.get("users").find({id:e.signedCookies.userId}).value();s?(r.locals.user=s,i()):r.redirect("/auth/login")}else r.redirect("/auth/login")};

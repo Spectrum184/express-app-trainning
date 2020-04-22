@@ -1,0 +1,1 @@
+"use strict";var mongoose=require("mongoose"),productSchema=new mongoose.Schema({name:String,image:String,description:String}),Product=mongoose.model("Product",productSchema,"products");module.exports=Product;

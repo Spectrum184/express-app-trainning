@@ -1,0 +1,1 @@
+"use strict";var express=require("express"),controller=require("../controllers/transfer.controller"),router=express.Router();router.get("/create",controller.create),router.post("/create",controller.postCreate),module.exports=router;

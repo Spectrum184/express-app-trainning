@@ -1,0 +1,1 @@
+"use strict";var db=require("../db");module.exports.addToCart=function(s,e,d){var r=s.params.productId,t=s.signedCookies.sessionId,i=db.get("sessions").find({id:t}).get("cart."+r,0).value();t&&db.get("sessions").find({id:t}).set("cart."+r,i+1).write(),e.redirect("/products")};

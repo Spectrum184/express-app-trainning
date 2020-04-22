@@ -1,0 +1,1 @@
+"use strict";module.exports.postCreate=function(e,r,s){var o=[];e.body.name||o.push("Name is required"),e.body.phone||o.push("Phone is required"),o.length?r.render("users/create",{errors:o,value:e.body}):s()};
